@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffd9d7;
+  background: #7fe0eb;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2381,4 +2381,11 @@ hr {
 }
 .sub-menu .menu-item {
   display: inline-block;
+}
+body {
+  background: url("C:Userswin10PicturesSavedPicturesowl.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
 }
