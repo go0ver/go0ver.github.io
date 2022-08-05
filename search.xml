@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>Test</title>
-      <link href="/2022/08/03/Test/"/>
-      <url>/2022/08/03/Test/</url>
+      <title>vue basic</title>
+      <link href="/2022/08/05/vue-basic/"/>
+      <url>/2022/08/05/vue-basic/</url>
       
-        <content type="html"><![CDATA[<h3 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h3><p>rrrooopppzzz</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="Vue基础知识点"><a href="#Vue基础知识点" class="headerlink" title="Vue基础知识点"></a>Vue基础知识点</h2><p><a href="https://cn.vuejs.org/">官方文档</a></p><h4 id="1-声明式渲染"><a href="#1-声明式渲染" class="headerlink" title="1. 声明式渲染"></a>1. 声明式渲染</h4><p>Vue的最基础特性是通过语法将数据直接渲染进DOM系统，通过Vue对象直接与DOM元素进行交互</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &#123;&#123; message &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var app = new Vue(&#123;</span><br><span class="line">el: &#x27;#app&#x27;,</span><br><span class="line">data: &#123;</span><br><span class="line">message: &#x27;Hello Vue!&#x27;</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line">//可以通过el属性指定元素，也可以通过$mount函数挂载元素</span><br></pre></td></tr></table></figure><h4 id="2-条件判断和循环"><a href="#2-条件判断和循环" class="headerlink" title="2. 条件判断和循环"></a>2. 条件判断和循环</h4><ul><li>条件判断：v-show和v-if，v-if直接操作dom元素，v-show仅设置元素display属性</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;test&quot;&gt;</span><br><span class="line">    &lt;p v-if=&quot;seen&quot;&gt;</span><br><span class="line">        see</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var test = new Vue(&#123;</span><br><span class="line">el: &#x27;#app-3&#x27;,</span><br><span class="line">data: &#123;</span><br><span class="line">seen: true</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><ul><li>循环：v-for控制循环</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;testFor&quot;&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">        &lt;li v-for=&quot;item in list&quot;&gt;</span><br><span class="line">            &#123;&#123; item.text &#125;&#125;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;/ol&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var testFor = new Vue(&#123;</span><br><span class="line">el: &#x27;#testFor&#x27;,</span><br><span class="line">data: &#123;</span><br><span class="line">list: [</span><br><span class="line">&#123;item: &#x27;123&#x27;&#125;</span><br><span class="line">&#123;item: &#x27;321&#x27;&#125;</span><br><span class="line">]</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -20,7 +20,7 @@
       
         <tags>
             
-            <tag> daliy </tag>
+            <tag> vue </tag>
             
         </tags>
       
