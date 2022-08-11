@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>DO,DTO,VO,BO,POJO</title>
+      <link href="/2022/08/08/DO-DTO-VO-BO-POJO/"/>
+      <url>/2022/08/08/DO-DTO-VO-BO-POJO/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.zhihu.com/people/guofu-angela/posts">一篇不错的概念介绍</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 后端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据包装 </tag>
+            
+            <tag> 后端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue basic</title>
       <link href="/2022/08/05/vue-basic/"/>
       <url>/2022/08/05/vue-basic/</url>
@@ -21,6 +48,8 @@
         <tags>
             
             <tag> vue </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
