@@ -20,30 +20,37 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="少就是多，慢就是快">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lay&#39;s tech blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="0. 前置 在开始编写之前有一个清晰的思路很重要。 慢慢来，理清思路再写比写完还要查缺补漏轻松很多 相信模板代码，实在想不出来多参考别人的代码  1. 基础算法归并排序 ACWING787 原理图    思路 分治法，将数组不断分割到无法分割为止 保证每个子数组都是有序的 对有序的子数组进行两两归并知道完全排序    1234567891011121314151617181920212223242">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ACWING算法基础课总结笔记">
+<meta property="og:url" content="http://example.com/2022/08/23/ACWING%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E6%80%BB%E7%BB%93%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="lay&#39;s tech blog">
-<meta property="og:description" content="少就是多，慢就是快">
+<meta property="og:description" content="0. 前置 在开始编写之前有一个清晰的思路很重要。 慢慢来，理清思路再写比写完还要查缺补漏轻松很多 相信模板代码，实在想不出来多参考别人的代码  1. 基础算法归并排序 ACWING787 原理图    思路 分治法，将数组不断分割到无法分割为止 保证每个子数组都是有序的 对有序的子数组进行两两归并知道完全排序    1234567891011121314151617181920212223242">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-2958d4f3d9dd9156f1b5dca6788fe8a7_720w.jpg">
+<meta property="article:published_time" content="2022-08-23T02:54:20.000Z">
+<meta property="article:modified_time" content="2022-08-23T03:41:45.225Z">
 <meta property="article:author" content="lay厉风行">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="acwing">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-2958d4f3d9dd9156f1b5dca6788fe8a7_720w.jpg">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/08/23/ACWING%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E6%80%BB%E7%BB%93%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>lay's tech blog</title>
+  <title>ACWING算法基础课总结笔记 | lay's tech blog</title>
   
 
 
@@ -179,9 +186,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -197,10 +205,9 @@
       <meta itemprop="name" content="lay's tech blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/23/ACWING%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E6%80%BB%E7%BB%93%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">ACWING算法基础课总结笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          ACWING算法基础课总结笔记
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -233,7 +240,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="0-前置"><a href="#0-前置" class="headerlink" title="0. 前置"></a>0. 前置</h2><ol>
+        <h2 id="0-前置"><a href="#0-前置" class="headerlink" title="0. 前置"></a>0. 前置</h2><ol>
 <li>在开始编写之前有一个清晰的思路很重要。</li>
 <li>慢慢来，理清思路再写比写完还要查缺补漏轻松很多</li>
 <li>相信模板代码，实在想不出来多参考别人的代码</li>
@@ -275,263 +282,52 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100010</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">binary_search</span><span class="params">(<span class="type">int</span> a[], <span class="type">int</span> k, <span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="comment">//要找到不小于k的第一个值和最后一个值</span></span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = n<span class="number">-1</span>, mid;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(a[mid] &lt; k)&#123;</span><br><span class="line">            <span class="comment">//更新l的判断条件，由于是找左边界，因此只要mid值小于k就更新l</span></span><br><span class="line">            <span class="comment">//如果小于等于还继续查找会不停向右移动区间最后找到右边界</span></span><br><span class="line">            <span class="comment">//边界条件：当l和r距离差1的时候，可能会出现指针不更新的情况，使l永远小于r，死循环</span></span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//r的值是l+r &gt;&gt; 1向下取整，r和l相差1的时候能保证r的值更新</span></span><br><span class="line">            r = mid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(a[l] != k)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;-1 -1\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, l);</span><br><span class="line">        l = <span class="number">0</span>, r = n<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">            mid = l + r + <span class="number">1</span> &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(a[mid] &gt; k) &#123;</span><br><span class="line">                r = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="comment">//l的值会更新成 l + r &gt;&gt; 1向上取整，r和l相差1的时候能保证l的值更新</span></span><br><span class="line">                l = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//数组长度,搜索次数,搜索关键字</span></span><br><span class="line">    <span class="type">int</span> n, q, k;</span><br><span class="line">    <span class="type">int</span> a[N];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;q);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; q; i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;k);</span><br><span class="line">        <span class="built_in">binary_search</span>(a, k, n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+        
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/08/DO-DTO-VO-BO-POJO/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/github_avatar.jpg">
-      <meta itemprop="name" content="lay厉风行">
-      <meta itemprop="description" content="少就是多，慢就是快">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lay's tech blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/08/DO-DTO-VO-BO-POJO/" class="post-title-link" itemprop="url">DO,DTO,VO,BO,POJO</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-08-08 10:45:30" itemprop="dateCreated datePublished" datetime="2022-08-08T10:45:30+08:00">2022-08-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-10 10:45:27" itemprop="dateModified" datetime="2022-08-10T10:45:27+08:00">2022-08-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">后端开发</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/350964880">DO、DTO、BO、VO、POJO区别 - 知乎 (zhihu.com)</a></p>
-<ul>
-<li><p>DO:domin object，抽象的数据表对象</p>
-</li>
-<li><p>DAO:data access object，实际操作数据表时，使用dao对数据表进行封装，来实现java业务代码对数据库的操作，包含了对实际数据库操作的各种方法封装</p>
-</li>
-<li><p>DTO:data transfer object，没有对应的数据表，当接口之间需要相应的数据渲染到前台时，使用DTO进行传输，DTO中的字段是DAO的子集</p>
-</li>
-<li><p>VO:view object，渲染到页面上的数据集合，相比于DTO或DAO需要进行数据转换以达到对应的显示格式</p>
-</li>
-<li><p>POJO:plain ordinary java object，只有getter,setter,toString方法的数据包装类，DO,DTO,VO都是POJO，DAO不是</p>
-</li>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>lay厉风行
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2022/08/23/ACWING%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E8%AF%BE%E6%80%BB%E7%BB%93%E7%AC%94%E8%AE%B0/" title="ACWING算法基础课总结笔记">http://example.com/2022/08/23/ACWING算法基础课总结笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
+</div>
 
-      
-    </div>
 
-    
-    
-    
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+              <a href="/tags/acwing/" rel="tag"># acwing</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/08/08/DO-DTO-VO-BO-POJO/" rel="prev" title="DO,DTO,VO,BO,POJO">
+      <i class="fa fa-chevron-left"></i> DO,DTO,VO,BO,POJO
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/05/vue-basic/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/github_avatar.jpg">
-      <meta itemprop="name" content="lay厉风行">
-      <meta itemprop="description" content="少就是多，慢就是快">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lay's tech blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/05/vue-basic/" class="post-title-link" itemprop="url">vue basic</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-08-05 09:01:23" itemprop="dateCreated datePublished" datetime="2022-08-05T09:01:23+08:00">2022-08-05</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-08 10:46:54" itemprop="dateModified" datetime="2022-08-08T10:46:54+08:00">2022-08-08</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">前端知识</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Vue基础知识点"><a href="#Vue基础知识点" class="headerlink" title="Vue基础知识点"></a>Vue基础知识点</h2><p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/">官方文档</a></p>
-<h4 id="1-声明式渲染"><a href="#1-声明式渲染" class="headerlink" title="1. 声明式渲染"></a>1. 声明式渲染</h4><p>Vue的最基础特性是通过语法将数据直接渲染进DOM系统，通过Vue对象直接与DOM元素进行交互</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &#123;&#123; message &#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var app = new Vue(&#123;</span><br><span class="line">	el: &#x27;#app&#x27;,</span><br><span class="line">	data: &#123;</span><br><span class="line">		message: &#x27;Hello Vue!&#x27;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br><span class="line">//可以通过el属性指定元素，也可以通过$mount函数挂载元素</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-条件判断和循环"><a href="#2-条件判断和循环" class="headerlink" title="2. 条件判断和循环"></a>2. 条件判断和循环</h4><ul>
-<li>条件判断：v-show和v-if，v-if直接操作dom元素，v-show仅设置元素display属性</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;test&quot;&gt;</span><br><span class="line">    &lt;p v-if=&quot;seen&quot;&gt;</span><br><span class="line">        see</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var test = new Vue(&#123;</span><br><span class="line">	el: &#x27;#app-3&#x27;,</span><br><span class="line">	data: &#123;</span><br><span class="line">		seen: true</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>循环：v-for控制循环</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;testFor&quot;&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">        &lt;li v-for=&quot;item in list&quot;&gt;</span><br><span class="line">            &#123;&#123; item.text &#125;&#125;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;/ol&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">var testFor = new Vue(&#123;</span><br><span class="line">	el: &#x27;#testFor&#x27;,</span><br><span class="line">	data: &#123;</span><br><span class="line">		list: [</span><br><span class="line">			&#123;item: &#x27;123&#x27;&#125;</span><br><span class="line">			&#123;item: &#x27;321&#x27;&#125;</span><br><span class="line">		]</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/08/03/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/github_avatar.jpg">
-      <meta itemprop="name" content="lay厉风行">
-      <meta itemprop="description" content="少就是多，慢就是快">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="lay's tech blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/03/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-08-03 10:02:01" itemprop="dateCreated datePublished" datetime="2022-08-03T10:02:01+08:00">2022-08-03</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -584,6 +380,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-%E5%89%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">0. 前置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">1. 基础算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F-ACWING787"><span class="nav-number">2.0.1.</span> <span class="nav-text">归并排序 ACWING787</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE-ACWING789"><span class="nav-number">2.0.2.</span> <span class="nav-text">二分查找 ACWING789</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
