@@ -185,6 +185,105 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/15/java%E8%A7%A3%E6%9E%90xml/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/github_avatar.jpg">
+      <meta itemprop="name" content="lay厉风行">
+      <meta itemprop="description" content="少就是多，慢就是快">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lay's tech blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/09/15/java%E8%A7%A3%E6%9E%90xml/" class="post-title-link" itemprop="url">java解析xml</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-09-15 08:43:09" itemprop="dateCreated datePublished" datetime="2022-09-15T08:43:09+08:00">2022-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-26 11:16:20" itemprop="dateModified" datetime="2022-09-26T11:16:20+08:00">2022-09-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">后端知识</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h4><p>​	公司要求使用xml格式的报文去请求接口获取对应的数据。接口所需的格式类似：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">xmlRequest</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">owner</span>&gt;</span><span class="tag">&lt;/<span class="name">owner</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">wareHouseId</span>&gt;</span><span class="tag">&lt;/<span class="name">wareHouseId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">stockNo</span>&gt;</span><span class="tag">&lt;/<span class="name">stockNo</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">xmlRequest</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>接口所返回的参数类似于</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">xmlResponse</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">stockNo</span>&gt;</span><span class="tag">&lt;/<span class="name">stockNo</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">stockNum</span>&gt;</span><span class="tag">&lt;/<span class="name">stockNum</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">freezNum</span>&gt;</span><span class="tag">&lt;/<span class="name">freezNum</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">xmlResponse</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="将实体类转化为xml格式"><a href="#将实体类转化为xml格式" class="headerlink" title="将实体类转化为xml格式"></a>将实体类转化为xml格式</h4><ul>
+<li><p>两个关键注解</p>
+<ol>
+<li><p>@JacksonXmlRootElement(localName &#x3D; “”)</p>
+<ul>
+<li>用于类名，不设置localName表示使用默认根元素名Clazz</li>
+</ul>
+</li>
+<li><p>@JacksonXmlProperty(localName &#x3D; “”)</p>
+<ul>
+<li>设置节点名</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="转换为String类型发送给接口接收响应"><a href="#转换为String类型发送给接口接收响应" class="headerlink" title="转换为String类型发送给接口接收响应"></a>转换为String类型发送给接口接收响应</h4><ul>
+<li>使用jacksonUtil可以将xml格式转化为String类型（反之同理）</li>
+<li>利用map封装请求所需的各个参数即可获取到对应的数据</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/05/Mysql-index%E7%9B%B8%E5%85%B3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -199,7 +298,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/09/05/Mysql-index%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">Mysql index相关</a>
+            <a href="/2022/09/05/Mysql-index%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">Mysql index</a>
         </h2>
 
         <div class="post-meta">
@@ -216,7 +315,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-09-06 09:48:32" itemprop="dateModified" datetime="2022-09-06T09:48:32+08:00">2022-09-06</time>
+                <time title="修改时间：2022-09-21 11:14:18" itemprop="dateModified" datetime="2022-09-21T11:14:18+08:00">2022-09-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -264,8 +363,7 @@
 <p><img src="https://i.niupic.com/images/2022/09/06/a53B.png" alt="image-20220905153031129"></p>
 <p><img src="https://i.niupic.com/images/2022/09/06/a53C.png" alt="image-20220905153107849"></p>
 <ul>
-<li><p>附：对于explain type常见字段的解析（性能由坏到好）</p>
-<ul>
+<li>附：对于explain type常见字段的解析（性能由坏到好）<ul>
 <li>ALL:全表扫描</li>
 <li>INDEX:等同于全表扫描，会先扫描索引表再根据查找条件列的顺序访问表中全部行<ul>
 <li>当extra字段为using index时表示使用了聚簇索引，即索引和内容相同，仅需查找索引表就可以获得对应数据<ul>
@@ -278,9 +376,12 @@
 <li>CONST:使用主键作为查询条件mysql就能将这次查询优化为一个常量</li>
 </ul>
 </li>
-<li><p>从执行结果来看，使用联合索引的name_cid_idx并没有因为使用了cid就调用了索引，因为cid不是name_cid_idx中最左边的属性，name才是。</p>
-</li>
+<li>从执行结果来看，使用联合索引的name_cid_idx并没有因为使用了cid就调用了索引，因为cid不是name_cid_idx中最左边的属性，name才是。</li>
 </ul>
+<h4 id="4-实际案例"><a href="#4-实际案例" class="headerlink" title="4. 实际案例"></a>4. 实际案例</h4><p><img src="C:\Users\win10\AppData\Roaming\Typora\typora-user-images\image-20220916135336317.png" alt="image-20220916135336317"></p>
+<p>使用索引优化该语句的运行时间：联合索引</p>
+<p><img src="C:\Users\win10\AppData\Roaming\Typora\typora-user-images\image-20220916135528986.png" alt="image-20220916135528986"></p>
+<p>order_by使用的索引跟在where索引的后面</p>
 
       
     </div>
@@ -714,20 +815,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
